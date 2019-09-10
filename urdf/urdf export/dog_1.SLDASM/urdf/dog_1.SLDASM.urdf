@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="dog_1.SLDASM">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-8.3591E-08 0.0010717 0.00033885"
+        rpy="0 0 0" />
+      <mass
+        value="0.41372" />
+      <inertia
+        ixx="0.00026854"
+        ixy="-1.6836E-06"
+        ixz="-9.0148E-10"
+        iyy="0.00011738"
+        iyz="4.6547E-07"
+        izz="0.0003447" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_1.SLDASM/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_1.SLDASM/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="leg_ab_FL">
+    <inertial>
+      <origin
+        xyz="-0.017463 0.040247 0.00023921"
+        rpy="0 0 0" />
+      <mass
+        value="0.13142" />
+      <inertia
+        ixx="1.3729E-05"
+        ixy="9.8297E-08"
+        ixz="4.2552E-07"
+        iyy="3.8003E-05"
+        iyz="-2.5794E-07"
+        izz="3.9203E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_1.SLDASM/meshes/leg_ab_FL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_1.SLDASM/meshes/leg_ab_FL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_ab_FL"
+    type="revolute">
+    <origin
+      xyz="0.04 -0.067117 -0.01"
+      rpy="0 0.084312 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg_ab_FL" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.78"
+      upper="0.78"
+      effort="1"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg_hip_FL">
+    <inertial>
+      <origin
+        xyz="-0.025561 -0.01099 -0.025634"
+        rpy="0 0 0" />
+      <mass
+        value="0.021021" />
+      <inertia
+        ixx="5.1575E-06"
+        ixy="-3.4462E-08"
+        ixz="-2.2133E-08"
+        iyy="2.3302E-06"
+        iyz="-2.0878E-06"
+        izz="3.3639E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_1.SLDASM/meshes/leg_hip_FL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_1.SLDASM/meshes/leg_hip_FL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_hip_FL"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="leg_ab_FL" />
+    <child
+      link="leg_hip_FL" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="1"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg_knee_FL">
+    <inertial>
+      <origin
+        xyz="-0.0068697 0.049653 0.00032046"
+        rpy="0 0 0" />
+      <mass
+        value="0.0099931" />
+      <inertia
+        ixx="2.513E-06"
+        ixy="-2.0041E-08"
+        ixz="9.4607E-10"
+        iyy="1.6234E-07"
+        iyz="-1.0125E-08"
+        izz="2.4283E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_1.SLDASM/meshes/leg_knee_FL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_1.SLDASM/meshes/leg_knee_FL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_knee_FL"
+    type="revolute">
+    <origin
+      xyz="-0.0173 -0.081412 -0.078602"
+      rpy="-0.86329 0 0" />
+    <parent
+      link="leg_hip_FL" />
+    <child
+      link="leg_knee_FL" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="1"
+      velocity="0" />
+  </joint>
+</robot>
