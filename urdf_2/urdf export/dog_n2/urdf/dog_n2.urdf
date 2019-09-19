@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="dog_n2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.026961 0.06548 0.16936"
+        rpy="0 0 0" />
+      <mass
+        value="0.16551" />
+      <inertia
+        ixx="0.0003923"
+        ixy="-4.0965E-09"
+        ixz="4.6826E-10"
+        iyy="0.0001428"
+        iyz="-1.6727E-08"
+        izz="0.00053235" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="lab_FL">
+    <inertial>
+      <origin
+        xyz="-0.00691499568551896 2.77555756156289E-17 -0.00599999989355071"
+        rpy="0 0 0" />
+      <mass
+        value="0.00388288484712263" />
+      <inertia
+        ixx="1.04650940823322E-07"
+        ixy="1.00032122416166E-21"
+        ixz="3.28972437877794E-15"
+        iyy="3.64557783410698E-07"
+        iyz="-2.60206831303292E-13"
+        izz="4.05017083306772E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lab_FL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lab_FL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jab_FL"
+    type="continuous">
+    <origin
+      xyz="-0.013038 -0.16937 0.1506"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lab_FL" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="3"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="lhip_FL">
+    <inertial>
+      <origin
+        xyz="0.0645400106619605 -0.00794377908090657 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00960427623809624" />
+      <inertia
+        ixx="1.76741163234083E-07"
+        ixy="2.40498792680468E-08"
+        ixz="-2.57479651861504E-22"
+        iyy="1.92743728772456E-05"
+        iyz="-4.08541256281297E-23"
+        izz="1.91609562437376E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lhip_FL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lhip_FL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jhip_FL"
+    type="continuous">
+    <origin
+      xyz="-0.018 0 -0.006"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="lab_FL" />
+    <child
+      link="lhip_FL" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="3"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="lknee_FL">
+    <inertial>
+      <origin
+        xyz="0.069957274950244 -0.00794846734311693 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0104780399457648" />
+      <inertia
+        ixx="1.84790039279272E-07"
+        ixy="2.69749919961358E-08"
+        ixz="-3.86865148882755E-21"
+        iyy="2.25383840800217E-05"
+        iyz="-5.00777743545239E-14"
+        izz="2.24645808161435E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lknee_FL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lknee_FL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jknee_FL"
+    type="continuous">
+    <origin
+      xyz="0.13 -0.006 0"
+      rpy="0 0 0" />
+    <parent
+      link="lhip_FL" />
+    <child
+      link="lknee_FL" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="3"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="lab_BL">
+    <inertial>
+      <origin
+        xyz="-0.00691499568551892 5.55111512312578E-17 0.00600000010644931"
+        rpy="0 0 0" />
+      <mass
+        value="0.00388288484712262" />
+      <inertia
+        ixx="1.04650940823322E-07"
+        ixy="9.50350148669715E-22"
+        ixz="3.28972454530459E-15"
+        iyy="3.64557783410697E-07"
+        iyz="-2.60206831266288E-13"
+        izz="4.05017083306771E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lab_BL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lab_BL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jab_BL"
+    type="continuous">
+    <origin
+      xyz="-0.013038 -0.16937 -0.017404"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lab_BL" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="3"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="lhip_BL">
+    <inertial>
+      <origin
+        xyz="0.0645400106619605 -0.00794377908090659 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00960427623809622" />
+      <inertia
+        ixx="1.76741163234083E-07"
+        ixy="2.40498792680504E-08"
+        ixz="8.34147633492078E-21"
+        iyy="1.92743728772456E-05"
+        iyz="-1.67171012541295E-23"
+        izz="1.91609562437376E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lhip_BL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lhip_BL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jhip_BL"
+    type="continuous">
+    <origin
+      xyz="-0.0179999999999999 0 0.00600000000000009"
+      rpy="0 0 -1.5707963267949" />
+    <parent
+      link="lab_BL" />
+    <child
+      link="lhip_BL" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="3"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="lknee_BL">
+    <inertial>
+      <origin
+        xyz="0.0699572750687382 0.00794491809239425 -0.000237472168225623"
+        rpy="0 0 0" />
+      <mass
+        value="0.0104780399457648" />
+      <inertia
+        ixx="1.84790038475002E-07"
+        ixy="-2.69626172229234E-08"
+        ixz="8.05907772502997E-10"
+        iyy="2.25383182007561E-05"
+        iyz="-2.20404719863234E-09"
+        izz="2.24646466962135E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lknee_BL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lknee_BL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jknee_BL"
+    type="continuous">
+    <origin
+      xyz="0.13 -0.00600000000000046 0"
+      rpy="-3.11171173046313 0 0" />
+    <parent
+      link="lhip_BL" />
+    <child
+      link="lknee_BL" />
+    <axis
+      xyz="0 0.999553598432897 -0.0298764766973523" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="3"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="lab_FR">
+    <inertial>
+      <origin
+        xyz="-0.00691499568551894 0 -0.00599999989355079"
+        rpy="0 0 0" />
+      <mass
+        value="0.00388288484712262" />
+      <inertia
+        ixx="1.04650940823322E-07"
+        ixy="8.86955923269881E-22"
+        ixz="3.28972315210084E-15"
+        iyy="3.64557783410697E-07"
+        iyz="-2.6020683129909E-13"
+        izz="4.05017083306771E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lab_FR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lab_FR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jab_FR"
+    type="continuous">
+    <origin
+      xyz="0.066962 -0.16937 0.1506"
+      rpy="-3.1416 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="lab_FR" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="3"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="lhip_FR">
+    <inertial>
+      <origin
+        xyz="0.0645400106619606 0.00794377908090611 -5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00960427623809623" />
+      <inertia
+        ixx="1.76741163234083E-07"
+        ixy="-2.4049879267914E-08"
+        ixz="3.77144199234386E-21"
+        iyy="1.92743728772456E-05"
+        iyz="-6.71316368719996E-22"
+        izz="1.91609562437376E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lhip_FR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lhip_FR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jhip_FR"
+    type="continuous">
+    <origin
+      xyz="-0.018 0 -0.00600000000000001"
+      rpy="0 0 1.5707963267949" />
+    <parent
+      link="lab_FR" />
+    <child
+      link="lhip_FR" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="3"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="lknee_FR">
+    <inertial>
+      <origin
+        xyz="0.0699572749502441 0.00794846734311642 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0104780399457648" />
+      <inertia
+        ixx="1.84790039279272E-07"
+        ixy="-2.69749919959799E-08"
+        ixz="3.14260248069787E-21"
+        iyy="2.25383840800217E-05"
+        iyz="-5.00777738781173E-14"
+        izz="2.24645808161436E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lknee_FR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lknee_FR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jknee_FR"
+    type="continuous">
+    <origin
+      xyz="0.13 0.00599999999999953 0"
+      rpy="0 0 0" />
+    <parent
+      link="lhip_FR" />
+    <child
+      link="lknee_FR" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="3"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="lab_BR">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lab_BR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lab_BR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jab_BR"
+    type="continuous">
+    <origin
+      xyz="0.066962 -0.16937 -0.017404"
+      rpy="0 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="lab_BR" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="3"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="lhip_BR">
+    <inertial>
+      <origin
+        xyz="0.0645400104928747 -0.00785192241670328 0.00120455895410896"
+        rpy="0 0 0" />
+      <mass
+        value="0.00960427623809623" />
+      <inertia
+        ixx="1.7674116425791E-07"
+        ixy="2.37721800262687E-08"
+        ixz="-3.64687568716902E-09"
+        iyy="1.92717650514557E-05"
+        iyz="-1.69991162435212E-08"
+        izz="1.91635640685036E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lhip_BR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lhip_BR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jhip_BR"
+    type="continuous">
+    <origin
+      xyz="-0.0179999999999999 0 -0.006"
+      rpy="0.152222676096005 0 -1.57079630550958" />
+    <parent
+      link="lab_BR" />
+    <child
+      link="lhip_BR" />
+    <axis
+      xyz="0 0.988436483238201 -0.151635479369758" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="3"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="lknee_BR">
+    <inertial>
+      <origin
+        xyz="0.0699572749502441 0.00794846734311642 -1.73472347597681E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0104780399457648" />
+      <inertia
+        ixx="1.84790039279272E-07"
+        ixy="-2.69749919959823E-08"
+        ixz="-7.26129805593474E-22"
+        iyy="2.25383840800217E-05"
+        iyz="-5.00777738996765E-14"
+        izz="2.24645808161436E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lknee_BR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_n2/meshes/lknee_BR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jknee_BR"
+    type="continuous">
+    <origin
+      xyz="0.129999999872288 -0.0059306216354937 0.000909813289479641"
+      rpy="2.98936997749379 0 0" />
+    <parent
+      link="lhip_BR" />
+    <child
+      link="lknee_BR" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="3"
+      velocity="3.14" />
+  </joint>
+</robot>
